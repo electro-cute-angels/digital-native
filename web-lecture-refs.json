@@ -1,0 +1,2365 @@
+{
+  "blocks": [
+    {
+      "id": "bmfl4izj1",
+      "type": "image",
+      "x": 24,
+      "y": 15,
+      "w": 15,
+      "h": 11,
+      "title": "Kev Bewersdorf, 2008",
+      "src": "asset:bmfl4izj1:original_db61d9759d94412cab496b71be12a0ec.gif",
+      "tags": []
+    },
+    {
+      "id": "bmfl4j1pp",
+      "type": "image",
+      "x": 24,
+      "y": 4.5,
+      "w": 15,
+      "h": 9.5,
+      "title": "MTAA",
+      "src": "asset:bmfl4j1pp:original_dd6e6f7f5226bf4b840c6dc51ca52beb.gif",
+      "tags": []
+    },
+    {
+      "id": "bmfl4v10u",
+      "type": "image",
+      "x": 43.5,
+      "y": 2,
+      "w": 11.5,
+      "h": 143.5,
+      "title": "Abe Linkoln, 2003",
+      "src": "asset:bmfl4v10u:original_3fd530886da237332b354a39fe4c16d6.jpg"
+    },
+    {
+      "id": "bmfl52nvi",
+      "type": "text",
+      "x": 0.5,
+      "y": 2.5,
+      "w": 19.5,
+      "h": 13.5,
+      "title": "Simple Net Art Diagram",
+      "markdown": "Created by artist duo MTAA, Simple Net Art Diagram (SNAD) is a schematic illustration of two computer terminals connected by a line and a red lightning bolt labeled “The art happens here.” Through an extreme economy of form, the now-iconic image conveys complex concepts about net art: first, that it “happens,” and therefore can be thought of as an action or a performance; and second, that it is defined by in-betweenness.\n\nSince its publication in the late 1990s, Simple Net Art Diagram has functioned as a kind of net art meme, remade by other artists to reflect differing conceptions of net art. Embracing this evolution, MTAA have released it under a Creative Commons license that permits alteration and reuse.\n\n\n",
+      "html": "<p>Created by artist duo MTAA, Simple Net Art Diagram (SNAD)&nbsp;is a schematic illustration of two computer terminals connected by a \nline and a red lightning bolt labeled “The art happens here.” Through an\n extreme economy of form, the now-iconic image conveys complex concepts \nabout net art: first, that <span style=\"background-color: rgb(253, 193, 0);\"><font color=\"#000000\">it “happens,” and therefore can be thought of\n as an action or a performance</font></span>; and second, that it is <span style=\"background-color: rgb(253, 193, 0);\"><font color=\"#000000\">defined by \nin-betweenness</font></span>.<br><br>Since its publication in the late 1990s, Simple Net Art Diagram\n has functioned as a kind of net art meme, remade by other artists to \nreflect differing conceptions of net art. Embracing this evolution, <u>MTAA\n have released it under a Creative Commons license that permits \nalteration and reuse</u>.</p><p><br></p>",
+      "tags": [
+        "webspace-as-action",
+        "webspace-as-performance"
+      ],
+      "blendMode": "normal"
+    },
+    {
+      "id": "bmfl65b70",
+      "type": "image",
+      "x": 62,
+      "y": 15,
+      "w": 17.5,
+      "h": 17.5,
+      "title": "Mezangelle  Mez Breeze, 1994",
+      "src": "asset:bmfl65b70:eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiIzOTQ5OTYxMi9vcmlnaW5hbF8xZDBiYmM4ODY3NGRlZWIxNGU3MGU1MGEyZGUxOWRkNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjI0MDAsImhlaWdodCI6MjQwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxd.webp"
+    },
+    {
+      "id": "bmfl669q8",
+      "type": "text",
+      "x": 62,
+      "y": 2,
+      "w": 17.5,
+      "h": 11.5,
+      "markdown": "In 1994, Australian artist and poet Mez Breeze began to develop an online language she named Mezangelle. Using programming language and informal speech, Mezangelle rearranges and dissects standard English to create new and unexpected meaning. Mez Breeze's overall approach to codework—online experimental writing that explores the relationship between machine and human languages—is imbued with a sense of playfulness and creativity. Her Mezangelle poetry has appeared throughout the internet for the last two decades under multiple names and connected to different avatars.",
+      "html": "<p>In 1994, Australian artist and poet Mez Breeze began to develop an online language she named Mezangelle. Using programming language and informal speech, Mezangelle rearranges and dissects standard English to create new and unexpected meaning. Mez Breeze's overall approach to <font color=\"#0aea00\"><i><u>codework</u></i></font>—online experimental writing that explores the relationship between machine and human languages—is imbued with a sense of playfulness and creativity. Her Mezangelle poetry has appeared throughout the internet for the last two decades under multiple names and connected to different avatars.</p>"
+    },
+    {
+      "id": "bmfl8kbyy",
+      "type": "video",
+      "x": 113.5,
+      "y": 16,
+      "w": 11.5,
+      "h": 9,
+      "title": "Screenfull, Abe Linkoln and Jimpunk, 2004",
+      "src": "https://vimeo.com/226285780",
+      "provider": "vimeo",
+      "tags": [
+        "screen-recording"
+      ]
+    },
+    {
+      "id": "bmfl8oipq",
+      "type": "code",
+      "x": 126.5,
+      "y": 7.5,
+      "w": 32,
+      "h": 21.5,
+      "title": "Code",
+      "code": "import type { Block, TextBlock } from '../types';\nimport { GRID_PX } from '../types';\nimport { marked } from 'marked';\nimport { getAssetUrl } from './persist';\n\ntype CanvasAPI = {\n  getScale: () => number;\n  isSnapEnabled?: () => boolean;\n};\n\nconst GRID = GRID_PX;\n\nexport function createBlockEl(block: Block, opts: { onMove?: (b: Block) => void }, api?: CanvasAPI) {\n  const el = document.createElement('div');\n  el.className = 'block';\n  el.dataset.id = block.id;\n  position(el, block);\n\n  // what is happening here?!?!?!?!?!?!\n  const dim = document.createElement('div');\n  dim.className = 'dim-label';\n  const setDim = () => {\n    const wpx = Math.round(block.w * GRID);\n    const hpx = Math.round(block.h * GRID);\n    dim.textContent = `${wpx}×${hpx}`;\n  };\n  setDim();\n",
+      "language": "javascript",
+      "tags": [
+        "code"
+      ]
+    },
+    {
+      "id": "bmfl91kb1",
+      "type": "text",
+      "x": 82.5,
+      "y": 2,
+      "w": 42.5,
+      "h": 11.5,
+      "title": "Text",
+      "markdown": "In 2004, artists Abe Linkoln (Rick Silva) and Jimpunk (whose real name is a closely guarded secret) began a new blog, hosted on the Blogger platform. Called Screenfull, the project was loud and crowded, taking a maximalist approach to content and design; the artists described it as “stadium rock net.art.”\nIn keeping with the serial nature of blogging, the artists posted frequently: short looping videos, animated GIFs, images, and audio clips, sampled and remixed from around the web in an ongoing multimedia conversation. At the same time, they worked against the blog format by continuously redesigning their page, creating a dynamic relationship between the posts and the structure of the site itself. The result was a cacophonous, multi-layered digital collage that grew and changed over time.\nBuilding on Jimpunk’s earlier forays into blogging as artistic practice, Screenfull was an influential exploration of the possibilities for net art in the web 2.0 era, as online production increasingly moved from personal web pages to hosted services such as Blogger. Its model of collaborative posting prefigured the later rise of surf clubs, setting the stage for a significant net art practice of in the mid- to late-2000s.",
+      "html": "<p>In\n 2004, artists Abe Linkoln (Rick Silva) and Jimpunk (whose real name is a\n closely guarded secret) began a new blog, hosted on the Blogger platform. Called Screenfull,\n the project was loud and crowded, taking a maximalist approach to \ncontent and design; the artists described it as “stadium rock net.art.”<br>In\n keeping with the serial nature of blogging, the artists posted \nfrequently: short looping videos, animated GIFs, images, and audio \nclips, sampled and remixed from around the web in an ongoing multimedia \nconversation. At the same time, they worked against the blog format by \ncontinuously redesigning their page, creating a dynamic relationship \nbetween the posts and the structure of the site itself. The result was a\n cacophonous, multi-layered digital collage that grew and changed over \ntime.<br>Building on Jimpunk’s earlier forays into blogging as artistic practice, Screenfull\n was an influential exploration of the possibilities for net art in the \nweb 2.0 era, as online production increasingly moved from personal web \npages to hosted services such as Blogger. Its model of collaborative \nposting prefigured the later rise of surf clubs, setting the stage for a significant net art practice of in the mid- to late-2000s.</p>"
+    },
+    {
+      "id": "bmfl9c9i9",
+      "type": "image",
+      "x": 98.5,
+      "y": 16,
+      "w": 12.5,
+      "h": 16.5,
+      "title": "image",
+      "src": "asset:bmfl9c9i9:eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiIzOTUwMDQ2NS9vcmlnaW5hbF80ZGU2YTNjM2JlNTRhMzY3NjQ4NTExNzMwZmIwNmIzMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjI0MDAsImhlaWdodCI6MjQwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxd.webp"
+    },
+    {
+      "id": "bmfl9cj0f",
+      "type": "image",
+      "x": 82.5,
+      "y": 16,
+      "w": 12.5,
+      "h": 16.5,
+      "src": "asset:bmfl9cj0f:eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiIzOTUwMDQ5MS9vcmlnaW5hbF9iN2UxODA5ZTc2ZDUxNGRlYzJhNzA2YWM2ZGE0NTZkMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjI0MDAsImhlaWdodCI6MjQwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxd.webp"
+    },
+    {
+      "id": "bmflb0b3z",
+      "type": "keyword",
+      "x": 108,
+      "y": 25.5,
+      "w": 7,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "HYPERTEXTUALITY",
+      "bgColor": "#000000"
+    },
+    {
+      "id": "bmflb15iw",
+      "type": "keyword",
+      "x": 108,
+      "y": 28.5,
+      "w": 7,
+      "h": 2.5,
+      "text": "NESTING"
+    },
+    {
+      "id": "bmflb9ctw",
+      "type": "image",
+      "x": 119.5,
+      "y": 31,
+      "w": 12.5,
+      "h": 10,
+      "title": "Sequence, grid, tree, web, 1989",
+      "src": "asset:bmflb9ctw:hypertext7.jpg",
+      "tags": [
+        "diagram"
+      ]
+    },
+    {
+      "id": "bmflbe9pt",
+      "type": "text",
+      "x": 133,
+      "y": 31,
+      "w": 25.5,
+      "h": 6.5,
+      "title": "Brockmann, Horton and Brock, 1989",
+      "markdown": "The unilinear sequence is the simplest organizational structure to explore, but such simplicity is paid for by a low expressive and classificatory power while, at the other extreme, the high expressive and classificatory power of the radically hypertextual architectures is paid for by a low predictability and a high risk of getting lost during navigation",
+      "html": "<p>The unilinear sequence is the simplest organizational structure to \nexplore, but such simplicity is paid for by a low expressive and \nclassificatory power while, at the other extreme, the <font color=\"#e520ff\"><u>high expressive</u></font><u> </u>\nand <font color=\"#e520ff\"><u>classificatory power</u></font> of the <font color=\"#e520ff\"><u>radically hypertextual architectures</u></font> is \npaid for by a low predictability and a high risk of getting lost during \nnavigation</p>",
+      "tags": [
+        "quote"
+      ]
+    },
+    {
+      "id": "bmflbnx7w",
+      "type": "image",
+      "x": 92.5,
+      "y": 36,
+      "w": 8.5,
+      "h": 11.5,
+      "title": "image",
+      "src": "asset:bmflbnx7w:Screenshot 2025-09-15 at 18-11-45 webspace-lecture Are.na.png"
+    },
+    {
+      "id": "bmflbq20n",
+      "type": "keyword",
+      "x": 108,
+      "y": 31.5,
+      "w": 7,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "NETWORKED"
+    },
+    {
+      "id": "bmflbu9z0",
+      "type": "keyword",
+      "x": 108,
+      "y": 34.5,
+      "w": 7,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "Z-INDEX"
+    },
+    {
+      "id": "bmflbzdwq",
+      "type": "link",
+      "x": 162.5,
+      "y": 7.5,
+      "w": 8,
+      "h": 4.5,
+      "title": "new scenario",
+      "url": "http://newscenario.net/",
+      "tags": [
+        "platform"
+      ]
+    },
+    {
+      "id": "bmflc0m40",
+      "type": "image",
+      "x": 160.5,
+      "y": 15,
+      "w": 12,
+      "h": 9.5,
+      "title": "body holes, new scenario",
+      "src": "asset:bmflc0m40:Screenshot 2025-09-15 at 18.21.41.png"
+    },
+    {
+      "id": "bmflc3e4v",
+      "type": "image",
+      "x": 174,
+      "y": 15,
+      "w": 12,
+      "h": 9.5,
+      "title": "chernobyl papers, new scenario",
+      "src": "asset:bmflc3e4v:Screenshot 2025-09-15 at 18.21.23.png",
+      "tags": [
+        "infinite-scroll"
+      ]
+    },
+    {
+      "id": "bmflc4mlf",
+      "type": "keyword",
+      "x": 181,
+      "y": 20.5,
+      "w": 6,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "INFINITE SCROLL"
+    },
+    {
+      "id": "bmflc5ijq",
+      "type": "keyword",
+      "x": 167.5,
+      "y": 20.5,
+      "w": 6,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "CYCLICAL CLICK"
+    },
+    {
+      "id": "bmflc853w",
+      "type": "keyword",
+      "x": 181,
+      "y": 23.5,
+      "w": 6,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "ZOOM LOGIC"
+    },
+    {
+      "id": "bmflcvnq4",
+      "type": "image",
+      "x": 130,
+      "y": 46.5,
+      "w": 12,
+      "h": 10.5,
+      "src": "asset:bmflcvnq4:eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiIzOTUwMDAyNS9vcmlnaW5hbF80ZjM0YTMxODk2ZTRlYjMzMTU4ZWM4NGUxZDM4ZGU1YS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjI0MDAsImhlaWdodCI6MjQwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxd.webp",
+      "tags": [
+        "time-based logic"
+      ]
+    },
+    {
+      "id": "bmflcvpmx",
+      "type": "image",
+      "x": 116,
+      "y": 46.5,
+      "w": 12,
+      "h": 10.5,
+      "src": "asset:bmflcvpmx:eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiIzOTUwMDAyOC9vcmlnaW5hbF9iNjQ1ZGFjNjdmYWQ2YmMyOTZkZmIwNjljNDhkNTlmMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjI0MDAsImhlaWdodCI6MjQwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxd.webp",
+      "tags": [
+        "time-based logic"
+      ]
+    },
+    {
+      "id": "bmflcvyq7",
+      "type": "image",
+      "x": 144,
+      "y": 46.5,
+      "w": 12,
+      "h": 10.5,
+      "src": "asset:bmflcvyq7:eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiIzOTUwMDAzMC9vcmlnaW5hbF8zOWJjMTMyYjhmMmYyYWFkODdkY2VlZTNkNDk2ZmQ3NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjI0MDAsImhlaWdodCI6MjQwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxd.webp",
+      "tags": [
+        "time-based logic"
+      ]
+    },
+    {
+      "id": "bmflcw3xr",
+      "type": "image",
+      "x": 158,
+      "y": 46.5,
+      "w": 12,
+      "h": 10.5,
+      "src": "asset:bmflcw3xr:eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiIzOTUwMDAzMi9vcmlnaW5hbF9iZmVlMzA4MmZkNzk4ZDQ5Zjc0ZjQ2N2QzM2UyNDY3Ny5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjI0MDAsImhlaWdodCI6MjQwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxd.webp",
+      "tags": [
+        "time-based logic"
+      ]
+    },
+    {
+      "id": "bmfld0k45",
+      "type": "link",
+      "x": 102.5,
+      "y": 49,
+      "w": 12,
+      "h": 5.5,
+      "title": "Young-Hae Chang Heavy Industries (장영혜중공업)",
+      "url": "https://www.yhchang.com/"
+    },
+    {
+      "id": "bmfld2414",
+      "type": "keyword",
+      "x": 165,
+      "y": 50.5,
+      "w": 9.5,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "TIME-BASED LOGIC",
+      "bgColor": "#000000",
+      "textColor": "#ffffff"
+    },
+    {
+      "id": "bmfld3hhm",
+      "type": "keyword",
+      "x": 165,
+      "y": 53.5,
+      "w": 9.5,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "HARD-CODED TIMING",
+      "bgColor": "#000000"
+    },
+    {
+      "id": "bmfld5dgc",
+      "type": "image",
+      "x": 146,
+      "y": 19.5,
+      "w": 12,
+      "h": 9,
+      "src": "asset:bmfld5dgc:original_db61d9759d94412cab496b71be12a0ec.gif"
+    },
+    {
+      "id": "bmfldiw6i",
+      "type": "keyword",
+      "x": 108,
+      "y": 40.5,
+      "w": 7,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "HOT SPOTS",
+      "bgColor": "#000000"
+    },
+    {
+      "id": "bmfldstlx",
+      "type": "image",
+      "x": 177,
+      "y": 31,
+      "w": 12.5,
+      "h": 16,
+      "title": "interaction sequence",
+      "src": "asset:bmfldstlx:1b895f2591cc045e404a8438cea82798.jpg"
+    },
+    {
+      "id": "bmflduhej",
+      "type": "image",
+      "x": 178,
+      "y": 34.5,
+      "w": 10.5,
+      "h": 9,
+      "title": "HTML markup",
+      "src": "asset:bmflduhej:The-generic-webpage-of-Fig-4-with-select-markup-of-HTML-element-tag-names-and-a-border.png"
+    },
+    {
+      "id": "bmfnw5etx",
+      "type": "image",
+      "x": 130,
+      "y": 59,
+      "w": 12,
+      "h": 10,
+      "title": "I feel so much shame, Jackie Lu",
+      "src": "asset:bmfnw5etx:Screenshot 2025-09-17 at 13.20.57.png",
+      "tags": [
+        "point-and-click"
+      ]
+    },
+    {
+      "id": "bmfnw6k3y",
+      "type": "image",
+      "x": 116,
+      "y": 69,
+      "w": 12,
+      "h": 10,
+      "title": "THE HTML REVIEW",
+      "src": "asset:bmfnw6k3y:Screenshot 2025-09-17 at 13.21.51.png"
+    },
+    {
+      "id": "bmfnw72id",
+      "type": "link",
+      "x": 102.5,
+      "y": 69,
+      "w": 12,
+      "h": 6,
+      "title": "THE HTML REVIEW",
+      "url": "https://thehtml.review/04/"
+    },
+    {
+      "id": "bmfnw9tbn",
+      "type": "image",
+      "x": 144,
+      "y": 59,
+      "w": 12,
+      "h": 10,
+      "src": "asset:bmfnw9tbn:Screenshot 2025-09-17 at 13.24.25.png",
+      "tags": [
+        "point-and-click"
+      ]
+    },
+    {
+      "id": "bmfnwafo6",
+      "type": "keyword",
+      "x": 163,
+      "y": 69.5,
+      "w": 8.5,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "POINT-AND-CLICK"
+    },
+    {
+      "id": "bmfnwbbwb",
+      "type": "keyword",
+      "x": 163,
+      "y": 72.5,
+      "w": 8.5,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "HTML INTERFACE STUDY"
+    },
+    {
+      "id": "bmfnwfzdh",
+      "type": "keyword",
+      "x": 173.5,
+      "y": 66,
+      "w": 6,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "TOGGLES"
+    },
+    {
+      "id": "bmfnwg2su",
+      "type": "keyword",
+      "x": 173.5,
+      "y": 62.5,
+      "w": 6,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "DIALS"
+    },
+    {
+      "id": "bmfnwg5pp",
+      "type": "keyword",
+      "x": 173.5,
+      "y": 59,
+      "w": 6,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "SWITCHES"
+    },
+    {
+      "id": "bmfnwkdw3",
+      "type": "image",
+      "x": 158,
+      "y": 59,
+      "w": 12,
+      "h": 10,
+      "src": "asset:bmfnwkdw3:Screenshot 2025-09-17 at 13.32.36.png",
+      "tags": [
+        "point-and-click",
+        "html interface study"
+      ]
+    },
+    {
+      "id": "bmfo0accr",
+      "type": "image",
+      "x": 116,
+      "y": 85,
+      "w": 12,
+      "h": 10,
+      "title": "ASCII Bedroom Memoir",
+      "src": "asset:bmfo0accr:Screenshot 2025-09-17 at 15.16.49.png"
+    },
+    {
+      "id": "bmfo0dqhn",
+      "type": "keyword",
+      "x": 114.5,
+      "y": 93.5,
+      "w": 6,
+      "h": 2.5,
+      "title": "keyword",
+      "text": ":HOVER LOGIC"
+    },
+    {
+      "id": "bmfo0gq9d",
+      "type": "keyword",
+      "x": 121,
+      "y": 93.5,
+      "w": 6,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "ASCII"
+    },
+    {
+      "id": "bmfo0k8yj",
+      "type": "link",
+      "x": 102.5,
+      "y": 87,
+      "w": 12,
+      "h": 6,
+      "title": "ASCII Bedroom Memoir",
+      "url": "https://thehtml.review/04/ascii-bedroom-archive/"
+    },
+    {
+      "id": "bmfo0ldas",
+      "type": "link",
+      "x": 130,
+      "y": 70.5,
+      "w": 12,
+      "h": 6,
+      "title": "I feel so much shame",
+      "url": "https://ifeelsomuchsha.me/"
+    },
+    {
+      "id": "bmfo0o9vc",
+      "type": "image",
+      "x": 130,
+      "y": 78,
+      "w": 12,
+      "h": 10,
+      "title": "Pure Information, Maya Man",
+      "src": "asset:bmfo0o9vc:Screenshot 2025-09-17 at 15.27.35.png",
+      "tags": [
+        "stream"
+      ]
+    },
+    {
+      "id": "bmfo0phfm",
+      "type": "link",
+      "x": 130,
+      "y": 89.5,
+      "w": 12,
+      "h": 6,
+      "title": "Pure Information",
+      "url": "https://pureinformation.stream/"
+    },
+    {
+      "id": "bmfo0q5ya",
+      "type": "keyword",
+      "x": 137.5,
+      "y": 84.5,
+      "w": 6,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "STREAM"
+    },
+    {
+      "id": "bmfo0vm35",
+      "type": "link",
+      "x": 144,
+      "y": 89.5,
+      "w": 12,
+      "h": 6,
+      "title": "Blair Simmons",
+      "url": "https://www.blairs.computer/"
+    },
+    {
+      "id": "bmfo0wssz",
+      "type": "image",
+      "x": 144,
+      "y": 78,
+      "w": 12,
+      "h": 10,
+      "title": "Blair Simmons",
+      "src": "asset:bmfo0wssz:Screenshot 2025-09-17 at 15.33.39.png"
+    },
+    {
+      "id": "bmfo0xk0s",
+      "type": "keyword",
+      "x": 151,
+      "y": 84.5,
+      "w": 6.5,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "WINDOW.PROMPT()"
+    },
+    {
+      "id": "bmfo18ymt",
+      "type": "link",
+      "x": 158,
+      "y": 89.5,
+      "w": 12,
+      "h": 6,
+      "title": "MEASURE A MACHINE'S HEART",
+      "url": "https://thehtml.review/03/measure-a-machines-heart/"
+    },
+    {
+      "id": "bmfo19y1h",
+      "type": "image",
+      "x": 158,
+      "y": 78,
+      "w": 12,
+      "h": 10,
+      "title": "MEASURE A MACHINE'S HEART",
+      "src": "asset:bmfo19y1h:Screenshot 2025-09-17 at 15.44.24.png",
+      "tags": [
+        "developer console"
+      ]
+    },
+    {
+      "id": "bmfo1b4fj",
+      "type": "keyword",
+      "x": 165.5,
+      "y": 85.5,
+      "w": 6,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "DEV CONSOLE"
+    },
+    {
+      "id": "bmfo1bj2l",
+      "type": "keyword",
+      "x": 165.5,
+      "y": 82.5,
+      "w": 6,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "VIEWPORT"
+    },
+    {
+      "id": "bmfo1hk4i",
+      "type": "image",
+      "x": 173,
+      "y": 78,
+      "w": 12,
+      "h": 10,
+      "title": "MONO DRIFT, HAMID YUKSEL",
+      "src": "asset:bmfo1hk4i:Screenshot 2025-09-17 at 15.50.25.png"
+    },
+    {
+      "id": "bmfo1ipyz",
+      "type": "link",
+      "x": 173,
+      "y": 89.5,
+      "w": 12,
+      "h": 6,
+      "title": "MONO DRIFT",
+      "url": "https://monodrift.vercel.app/s1"
+    },
+    {
+      "id": "bmfo1k63r",
+      "type": "keyword",
+      "x": 181,
+      "y": 85,
+      "w": 6,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "SIMULATION"
+    },
+    {
+      "id": "bmfo1q4i9",
+      "type": "link",
+      "x": 188.5,
+      "y": 89.5,
+      "w": 12,
+      "h": 6,
+      "title": "DUMPLING.LOVE",
+      "url": "https://dumpling.love/"
+    },
+    {
+      "id": "bmfo1qqgo",
+      "type": "image",
+      "x": 188.5,
+      "y": 78,
+      "w": 12,
+      "h": 10,
+      "title": "DUMPLING.LOVE",
+      "src": "asset:bmfo1qqgo:Screenshot 2025-09-17 at 15.57.33.png"
+    },
+    {
+      "id": "bmfo1r6xz",
+      "type": "keyword",
+      "x": 196,
+      "y": 85,
+      "w": 6,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "HTML EXPOSED"
+    },
+    {
+      "id": "bmfo1y7km",
+      "type": "image",
+      "x": 206,
+      "y": 78,
+      "w": 12,
+      "h": 10,
+      "title": "HTML GARDEN",
+      "src": "asset:bmfo1y7km:Screenshot 2025-09-17 at 16.03.19.png"
+    },
+    {
+      "id": "bmfo1yl9a",
+      "type": "link",
+      "x": 206,
+      "y": 89.5,
+      "w": 12,
+      "h": 6,
+      "title": "HTML GARDEN",
+      "url": "https://www.htmls.garden/"
+    },
+    {
+      "id": "bmfo1z6bs",
+      "type": "keyword",
+      "x": 212.5,
+      "y": 85,
+      "w": 7,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "<HTML ELEMENTS>"
+    },
+    {
+      "id": "bmfo23z3p",
+      "type": "image",
+      "x": 221.5,
+      "y": 78,
+      "w": 12,
+      "h": 10,
+      "title": "TODAY, WE SAW",
+      "src": "asset:bmfo23z3p:Screenshot 2025-09-17 at 16.07.50.png",
+      "tags": [
+        "css filters"
+      ]
+    },
+    {
+      "id": "bmfo2478l",
+      "type": "link",
+      "x": 221.5,
+      "y": 89.5,
+      "w": 12,
+      "h": 6,
+      "title": "TODAY, WE SAW",
+      "url": "https://thehtml.review/01/today-we-saw"
+    },
+    {
+      "id": "bmfo24z0a",
+      "type": "keyword",
+      "x": 229.5,
+      "y": 85,
+      "w": 6,
+      "h": 2.5,
+      "title": "keyword",
+      "text": ":HOVER"
+    },
+    {
+      "id": "bmfo2beg0",
+      "type": "keyword",
+      "x": 209,
+      "y": 56,
+      "w": 9,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "WEBSPACE-AS-SYNTHESIS",
+      "bgColor": "#000000"
+    },
+    {
+      "id": "bmfo2gvaf",
+      "type": "keyword",
+      "x": 209.5,
+      "y": 59.5,
+      "w": 6,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "EXERCISE 1"
+    },
+    {
+      "id": "bmfo2ktn0",
+      "type": "keyword",
+      "x": 219.5,
+      "y": 59.5,
+      "w": 6.5,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "BECOME A CODER"
+    },
+    {
+      "id": "bmfo2kzmm",
+      "type": "keyword",
+      "x": 226.5,
+      "y": 59.5,
+      "w": 10.5,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "BECOME A PROMPT-ENGINEER"
+    },
+    {
+      "id": "bmfo426yg",
+      "type": "image",
+      "x": 116,
+      "y": 100,
+      "w": 12,
+      "h": 10,
+      "title": "SFPC school for poetic computation",
+      "src": "asset:bmfo426yg:Screenshot 2025-09-17 at 17.02.23.png"
+    },
+    {
+      "id": "bmfo436h2",
+      "type": "link",
+      "x": 102,
+      "y": 100,
+      "w": 12,
+      "h": 6,
+      "title": "spfc",
+      "url": "https://sfpc.study/"
+    },
+    {
+      "id": "bmfo4b6il",
+      "type": "link",
+      "x": 102,
+      "y": 113.5,
+      "w": 12,
+      "h": 6,
+      "title": "the useless web",
+      "url": "https://theuselessweb.com/"
+    },
+    {
+      "id": "bmfo4bcog",
+      "type": "image",
+      "x": 116,
+      "y": 111.5,
+      "w": 12,
+      "h": 10,
+      "title": "THE USELESS WEB",
+      "src": "asset:bmfo4bcog:Screenshot 2025-09-17 at 17.09.26.png"
+    },
+    {
+      "id": "bmfo4ok5w",
+      "type": "link",
+      "x": 102,
+      "y": 126.5,
+      "w": 12,
+      "h": 6,
+      "title": "advertisements in my dreams",
+      "url": "https://toddwords.com/inmydreams/"
+    },
+    {
+      "id": "bmfo4p3hb",
+      "type": "image",
+      "x": 116,
+      "y": 126.5,
+      "w": 12,
+      "h": 10,
+      "title": "ADVERTISEMENTS IN MY DREAMS",
+      "src": "asset:bmfo4p3hb:Screenshot 2025-09-17 at 17.19.51.png"
+    },
+    {
+      "id": "bmfo4qhpl",
+      "type": "keyword",
+      "x": 123.5,
+      "y": 133,
+      "w": 7,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "PROMPT WINDOWS"
+    },
+    {
+      "id": "bmfo4t4ls",
+      "type": "link",
+      "x": 130,
+      "y": 113.5,
+      "w": 12,
+      "h": 6,
+      "title": "Link",
+      "url": "https://www.returnhome.site/"
+    },
+    {
+      "id": "bmfo4tcn5",
+      "type": "image",
+      "x": 144,
+      "y": 113.5,
+      "w": 12,
+      "h": 10,
+      "title": "return home, tyler yin",
+      "src": "asset:bmfo4tcn5:Screenshot 2025-09-17 at 17.23.27.png",
+      "tags": [
+        "css filters"
+      ]
+    },
+    {
+      "id": "bmfo4vbme",
+      "type": "keyword",
+      "x": 151.5,
+      "y": 117.5,
+      "w": 6.5,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "OPTION BUTTONS"
+    },
+    {
+      "id": "bmfo50y1b",
+      "type": "keyword",
+      "x": 151.5,
+      "y": 120.5,
+      "w": 6.5,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "CSS FILTERS"
+    },
+    {
+      "id": "bmfo5d1ur",
+      "type": "image",
+      "x": 144,
+      "y": 100,
+      "w": 12,
+      "h": 10,
+      "title": "Himala (Miracle)",
+      "src": "asset:bmfo5d1ur:Screenshot 2025-09-17 at 17.38.53.png"
+    },
+    {
+      "id": "bmfo5dt20",
+      "type": "link",
+      "x": 130,
+      "y": 100,
+      "w": 12,
+      "h": 6,
+      "title": "Link",
+      "url": "https://everythingi.love/#world/himala/"
+    },
+    {
+      "id": "bmfo5ergg",
+      "type": "keyword",
+      "x": 140.5,
+      "y": 108,
+      "w": 6.5,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "POP UP WINDOWS"
+    },
+    {
+      "id": "bmfo5ftzl",
+      "type": "keyword",
+      "x": 147.5,
+      "y": 108,
+      "w": 7.5,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "WEB PERFORMANCE"
+    },
+    {
+      "id": "bmfo5mu30",
+      "type": "link",
+      "x": 130,
+      "y": 126.5,
+      "w": 12,
+      "h": 6,
+      "title": "Link",
+      "url": "https://everest-pipkin.com/#games/barnaclegoose.html"
+    },
+    {
+      "id": "bmfo5n2rv",
+      "type": "image",
+      "x": 144,
+      "y": 126.5,
+      "w": 12,
+      "h": 10,
+      "title": "EVEREST PIPKIN",
+      "src": "asset:bmfo5n2rv:Screenshot 2025-09-17 at 17.46.31.png"
+    },
+    {
+      "id": "bmfo5o3co",
+      "type": "keyword",
+      "x": 151.5,
+      "y": 130.5,
+      "w": 14.5,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "THE BROWSER IS ALREADY A GAME ENGINE"
+    },
+    {
+      "id": "bmfo5piec",
+      "type": "keyword",
+      "x": 151.5,
+      "y": 133.5,
+      "w": 6,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "HOTLINKED WEB"
+    },
+    {
+      "id": "bmfo5q01r",
+      "type": "keyword",
+      "x": 164.5,
+      "y": 133.5,
+      "w": 6,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "IFRAMES"
+    },
+    {
+      "id": "bmfo5qbc9",
+      "type": "keyword",
+      "x": 158,
+      "y": 133.5,
+      "w": 6,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "API PROTOCOLS"
+    },
+    {
+      "id": "bmfo672u3",
+      "type": "link",
+      "x": 130,
+      "y": 140,
+      "w": 12,
+      "h": 6,
+      "title": "Link",
+      "url": "https://antiboredom.github.io/baabaa/index.html"
+    },
+    {
+      "id": "bmfo67a5a",
+      "type": "image",
+      "x": 144,
+      "y": 140,
+      "w": 12,
+      "h": 10,
+      "title": "BAABAA, SAM LAVIGNE",
+      "src": "asset:bmfo67a5a:Screenshot 2025-09-17 at 18.02.03.png",
+      "tags": [
+        "scraping"
+      ]
+    },
+    {
+      "id": "bmfo67l1d",
+      "type": "keyword",
+      "x": 150.5,
+      "y": 147,
+      "w": 6,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "SCRAPING LOGIC"
+    },
+    {
+      "id": "bmfo69j1l",
+      "type": "image",
+      "x": 158,
+      "y": 140,
+      "w": 12,
+      "h": 10,
+      "title": "NYDP COPPELGANGER, SAM L.",
+      "src": "asset:bmfo69j1l:Screenshot 2025-09-17 at 18.04.05.png"
+    },
+    {
+      "id": "bmfo6a3gf",
+      "type": "link",
+      "x": 172,
+      "y": 140,
+      "w": 12,
+      "h": 6,
+      "title": "Link",
+      "url": "https://coppelganger.lav.io/"
+    },
+    {
+      "id": "bmfo6bqxg",
+      "type": "keyword",
+      "x": 157.5,
+      "y": 147,
+      "w": 6,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "OPEN DATA"
+    },
+    {
+      "id": "bmfo6ytxq",
+      "type": "image",
+      "x": 173,
+      "y": 107.5,
+      "w": 12,
+      "h": 10,
+      "title": "on and off, Rafael Rozendal",
+      "src": "asset:bmfo6ytxq:Screen Shot 2017-12-07 at 4.13.02 PM.png"
+    },
+    {
+      "id": "bmfo6z1g9",
+      "type": "link",
+      "x": 173,
+      "y": 100,
+      "w": 12,
+      "h": 6,
+      "title": "Rafael Rozendal",
+      "url": "https://onandoff.org/"
+    },
+    {
+      "id": "bmfo76n7z",
+      "type": "link",
+      "x": 188.5,
+      "y": 100,
+      "w": 12,
+      "h": 6,
+      "title": "the revolving internet",
+      "url": "https://therevolvinginternet.com/"
+    },
+    {
+      "id": "bmfo77mq9",
+      "type": "image",
+      "x": 188.5,
+      "y": 107.5,
+      "w": 12,
+      "h": 10,
+      "title": "the revolving internet, c. dullaart",
+      "src": "asset:bmfo77mq9:Screenshot 2025-09-17 at 18.30.37.png"
+    },
+    {
+      "id": "bmfo7bu8d",
+      "type": "keyword",
+      "x": 195.5,
+      "y": 111.5,
+      "w": 7,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "PLATFORM LOGICS"
+    },
+    {
+      "id": "bmfo7c3xm",
+      "type": "keyword",
+      "x": 195.5,
+      "y": 114.5,
+      "w": 7,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "CSS FILTERS"
+    },
+    {
+      "id": "bmfo7g6z1",
+      "type": "image",
+      "x": 206,
+      "y": 107.5,
+      "w": 12,
+      "h": 10,
+      "title": "i'm here and there, jonas lund",
+      "src": "asset:bmfo7g6z1:Screen Shot 2018-10-26 at 11.04.04 .png"
+    },
+    {
+      "id": "bmfo7gulv",
+      "type": "link",
+      "x": 206,
+      "y": 100,
+      "w": 12,
+      "h": 6,
+      "title": "jonas lund",
+      "url": "https://imhereandthere.com/"
+    },
+    {
+      "id": "bmfo7h23o",
+      "type": "keyword",
+      "x": 209,
+      "y": 111.5,
+      "w": 10,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "NETWORKED PERFORMANCE"
+    },
+    {
+      "id": "bmfo7ih2e",
+      "type": "keyword",
+      "x": 209,
+      "y": 114.5,
+      "w": 10,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "REAL-TIME BROWSING"
+    },
+    {
+      "id": "bmfo7o0gs",
+      "type": "link",
+      "x": 221.5,
+      "y": 100,
+      "w": 12,
+      "h": 6,
+      "title": "image atlas",
+      "url": "https://www.imageatlas.org/"
+    },
+    {
+      "id": "bmfo7oq6b",
+      "type": "image",
+      "x": 221.5,
+      "y": 107.5,
+      "w": 12,
+      "h": 10,
+      "title": "image atlas",
+      "src": "asset:bmfo7oq6b:Screenshot 2025-09-17 at 18.43.15.png"
+    },
+    {
+      "id": "bmfo7p3c9",
+      "type": "keyword",
+      "x": 226.5,
+      "y": 114.5,
+      "w": 6,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "SEARCH ENGINE"
+    },
+    {
+      "id": "bmfo7s2uh",
+      "type": "link",
+      "x": 237,
+      "y": 100,
+      "w": 12,
+      "h": 6,
+      "title": "disimages",
+      "url": "https://disimages.rhizome.org/"
+    },
+    {
+      "id": "bmfo7srw8",
+      "type": "image",
+      "x": 237,
+      "y": 107.5,
+      "w": 12,
+      "h": 10,
+      "title": "disimages",
+      "src": "asset:bmfo7srw8:Screenshot 2025-09-17 at 18.47.07.png"
+    },
+    {
+      "id": "bmfo7ur4b",
+      "type": "keyword",
+      "x": 237,
+      "y": 114.5,
+      "w": 10.5,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "UNCANNY STOCK IMAGES"
+    },
+    {
+      "id": "bmfo897a8",
+      "type": "code",
+      "x": 188.5,
+      "y": 129,
+      "w": 16,
+      "h": 12,
+      "title": "HTML",
+      "code": "<!DOCTYPE html>\n<html>\n<head>\n    <title>Page Title</title>\n</head>\n<body>\n\n    <h1>This is a Heading</h1>\n    <p>This is a paragraph.</p>\n\n</body>\n</html> ",
+      "language": "html",
+      "tags": [
+        "code"
+      ]
+    },
+    {
+      "id": "bmfo8az2g",
+      "type": "code",
+      "x": 223,
+      "y": 130.5,
+      "w": 16,
+      "h": 12,
+      "title": "JAVASCRIPT",
+      "code": "document.getElementById(\"demo\").innerHTML = \"Hello JavaScript!\";\nconsole.log('Hello!');",
+      "language": "javascript",
+      "tags": [
+        "code"
+      ],
+      "blendMode": "overlay"
+    },
+    {
+      "id": "bmfo8cpfx",
+      "type": "code",
+      "x": 206,
+      "y": 129,
+      "w": 16,
+      "h": 12,
+      "title": "CSS",
+      "code": "h1 {\n  color: red;\n}\n\np,\nli {\n  background-color: rgba(0,255,255,0.4);\n}",
+      "language": "css",
+      "tags": [
+        "code"
+      ]
+    },
+    {
+      "id": "bmfo8fjxj",
+      "type": "keyword",
+      "x": 188.5,
+      "y": 126,
+      "w": 6,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "STRUCTURE"
+    },
+    {
+      "id": "bmfo8frs9",
+      "type": "keyword",
+      "x": 206,
+      "y": 126,
+      "w": 6,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "STYLE SHEET"
+    },
+    {
+      "id": "bmfo8gbh9",
+      "type": "keyword",
+      "x": 223.5,
+      "y": 126,
+      "w": 6,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "LOGIC"
+    },
+    {
+      "id": "bmfo8gik2",
+      "type": "keyword",
+      "x": 230,
+      "y": 126,
+      "w": 6,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "BEHAVIOUR"
+    },
+    {
+      "id": "bmfo8hqkt",
+      "type": "keyword",
+      "x": 188.5,
+      "y": 123,
+      "w": 6,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "WEBSPACE"
+    },
+    {
+      "id": "bmfoayqpj",
+      "type": "link",
+      "x": 89.5,
+      "y": 78.5,
+      "w": 12,
+      "h": 6,
+      "title": "Link",
+      "url": "https://mifsud.org/sun"
+    },
+    {
+      "id": "bmfoazerk",
+      "type": "image",
+      "x": 102.5,
+      "y": 76.5,
+      "w": 12,
+      "h": 10,
+      "title": "SUN LETTERS",
+      "src": "asset:bmfoazerk:Screenshot 2025-09-17 at 20.15.41.png"
+    },
+    {
+      "id": "bmfob2h52",
+      "type": "keyword",
+      "x": 165,
+      "y": 56.5,
+      "w": 6,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "ORCHESTRATED"
+    },
+    {
+      "id": "bmfp8lrmf",
+      "type": "shape",
+      "kind": "circle",
+      "x": 243,
+      "y": 129,
+      "w": 9,
+      "h": 10.5,
+      "title": "HTML",
+      "stroke": "#ffffff",
+      "strokeWidth": 1,
+      "fillOpacity": 0.8,
+      "blendMode": "exclusion"
+    },
+    {
+      "id": "bmfp8md1e",
+      "type": "shape",
+      "kind": "circle",
+      "x": 247.5,
+      "y": 129,
+      "w": 9,
+      "h": 10.5,
+      "title": "CSS",
+      "stroke": "#ffffff",
+      "strokeWidth": 1,
+      "fillOpacity": 0.8,
+      "blendMode": "exclusion",
+      "strokeOpacity": 1
+    },
+    {
+      "id": "bmfp8mqjt",
+      "type": "shape",
+      "kind": "circle",
+      "x": 245,
+      "y": 134,
+      "w": 9,
+      "h": 10.5,
+      "title": "JS",
+      "stroke": "#fefefe",
+      "strokeWidth": 1,
+      "fillOpacity": 1,
+      "blendMode": "exclusion"
+    },
+    {
+      "id": "bmfpaxuzy",
+      "type": "code",
+      "x": 223.5,
+      "y": 129,
+      "w": 16,
+      "h": 12,
+      "title": "JAVASCRIPT",
+      "code": "let a = prompt('Enter the first variable: ');\nlet b = prompt('Enter the second variable: ');\n\nlet temp;\n\ntemp = a;\na = b;\nb = temp;\n\nconsole.log(`The value of a after swapping: ${a}`);",
+      "language": "javascript"
+    },
+    {
+      "id": "bmfpaz6cy",
+      "type": "shape",
+      "kind": "rect",
+      "x": 213.5,
+      "y": 136.5,
+      "w": 10,
+      "h": 11.5,
+      "stroke": "#ffffff",
+      "strokeWidth": 1,
+      "blendMode": "normal"
+    },
+    {
+      "id": "bmfpazqrr",
+      "type": "shape",
+      "kind": "rect",
+      "x": 214.5,
+      "y": 137.5,
+      "w": 8,
+      "h": 9,
+      "stroke": "#ffffff",
+      "strokeWidth": 1
+    },
+    {
+      "id": "bmftu23io",
+      "type": "link",
+      "x": 102,
+      "y": 155,
+      "w": 12,
+      "h": 6,
+      "title": "Link",
+      "url": "https://wwwwwwwww.jodi.org/"
+    },
+    {
+      "id": "bmftu2riz",
+      "type": "image",
+      "x": 116,
+      "y": 155,
+      "w": 12,
+      "h": 10,
+      "title": "JODI",
+      "src": "asset:bmftu2riz:Screenshot 2025-09-21 at 17.09.35.png"
+    },
+    {
+      "id": "bmftu8td0",
+      "type": "link",
+      "x": 102,
+      "y": 167.5,
+      "w": 12,
+      "h": 6,
+      "title": "Link",
+      "url": "https://brandon.guggenheim.org/"
+    },
+    {
+      "id": "bmftu9cmk",
+      "type": "image",
+      "x": 116,
+      "y": 167.5,
+      "w": 12,
+      "h": 10,
+      "title": "Brandon, Shu Lea Cheang",
+      "src": "asset:bmftu9cmk:Screenshot 2025-09-21 at 17.14.40.png"
+    },
+    {
+      "id": "bmftua41b",
+      "type": "keyword",
+      "x": 125,
+      "y": 162,
+      "w": 9,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "BREAKING THE BROWSER",
+      "blendMode": "normal"
+    },
+    {
+      "id": "bmftudsmw",
+      "type": "keyword",
+      "x": 125,
+      "y": 174.5,
+      "w": 11.5,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "GUGGENHEIM COMMISION"
+    },
+    {
+      "id": "bmftues7j",
+      "type": "link",
+      "x": 102,
+      "y": 174.5,
+      "w": 12,
+      "h": 6,
+      "title": "Link",
+      "url": "https://brandon.guggenheim.org/roadtrip/BARBIN/BarbinFrame.html"
+    },
+    {
+      "id": "bmftufsz8",
+      "type": "image",
+      "x": 116,
+      "y": 178.5,
+      "w": 12,
+      "h": 10,
+      "title": "Brandon, Shu Lea Cheang",
+      "src": "asset:bmftufsz8:Screenshot 2025-09-21 at 17.19.43.png"
+    },
+    {
+      "id": "bmftv9k0m",
+      "type": "text",
+      "x": 102,
+      "y": 191.5,
+      "w": 12,
+      "h": 6,
+      "title": "Omar Kholeif",
+      "markdown": "art that is produced with a knowing awareness of the networked nature of our collective culture",
+      "html": "art that is produced with a knowing awareness of the networked nature of our collective culture"
+    },
+    {
+      "id": "bmftvht5m",
+      "type": "image",
+      "x": 102,
+      "y": 200,
+      "w": 12,
+      "h": 10,
+      "src": "asset:bmftvht5m:Screenshot 2025-09-21 at 17.49.08.png"
+    },
+    {
+      "id": "bmftvi16o",
+      "type": "link",
+      "x": 89,
+      "y": 200,
+      "w": 12,
+      "h": 6,
+      "title": "Link",
+      "url": "https://nettime.org/nettime/DOCS/zkp5/intro1.html"
+    },
+    {
+      "id": "bmftvjreb",
+      "type": "image",
+      "x": 116,
+      "y": 200,
+      "w": 12,
+      "h": 10,
+      "title": "NETTIME'S ZKP SERIES",
+      "src": "asset:bmftvjreb:Screenshot 2025-09-21 at 17.50.50.png"
+    },
+    {
+      "id": "bmftvlpy3",
+      "type": "link",
+      "x": 143,
+      "y": 200,
+      "w": 12,
+      "h": 6,
+      "title": "Link",
+      "url": "https://nettime.org/nettime/DOCS/1/toc(2).html"
+    },
+    {
+      "id": "bmftvlts3",
+      "type": "image",
+      "x": 130,
+      "y": 200,
+      "w": 12,
+      "h": 10,
+      "src": "asset:bmftvlts3:Screenshot 2025-09-21 at 17.52.16.png"
+    },
+    {
+      "id": "bmftvmknm",
+      "type": "link",
+      "x": 116,
+      "y": 191.5,
+      "w": 12,
+      "h": 6,
+      "title": "Link",
+      "url": "https://nettime.org/pub.html"
+    },
+    {
+      "id": "bmftvo2wu",
+      "type": "image",
+      "x": 116,
+      "y": 212,
+      "w": 12,
+      "h": 10,
+      "src": "asset:bmftvo2wu:Screenshot 2025-09-21 at 17.54.08.png"
+    },
+    {
+      "id": "bmftvo7y0",
+      "type": "link",
+      "x": 116,
+      "y": 223,
+      "w": 12,
+      "h": 6,
+      "title": "Link",
+      "url": "http://www.ljudmila.org/nettime/zkp4/toc.htm"
+    },
+    {
+      "id": "bmftvtts8",
+      "type": "image",
+      "x": 188.5,
+      "y": 66,
+      "w": 12,
+      "h": 10,
+      "title": "SMULATION",
+      "src": "asset:bmftvtts8:Screenshot 2025-09-21 at 17.58.28.png"
+    },
+    {
+      "id": "bmftvu0vy",
+      "type": "link",
+      "x": 188.5,
+      "y": 58.5,
+      "w": 12,
+      "h": 6,
+      "title": "POOLSUITE.NET",
+      "url": "https://poolsuite.net/"
+    },
+    {
+      "id": "bmftw5fjq",
+      "type": "link",
+      "x": 130,
+      "y": 155,
+      "w": 12,
+      "h": 6,
+      "title": "lecture by JODI",
+      "url": "https://media.ccc.de/v/33c3-8444-jodi_-_apache_is_functioning_normally"
+    },
+    {
+      "id": "bmftw783m",
+      "type": "image",
+      "x": 144,
+      "y": 155,
+      "w": 12,
+      "h": 10,
+      "src": "asset:bmftw783m:Screenshot 2025-09-21 at 18.09.03.png"
+    },
+    {
+      "id": "bmftwfaui",
+      "type": "image",
+      "x": 162.5,
+      "y": 200,
+      "w": 12,
+      "h": 10,
+      "title": "MY BOYFRIEND CAME BACK FROM THE WAR, OLIA LIALINA",
+      "src": "asset:bmftwfaui:Screen Shot 2016-11-09 at 1.21.11 PM.png"
+    },
+    {
+      "id": "bmftwfwqs",
+      "type": "image",
+      "x": 176.5,
+      "y": 200,
+      "w": 12,
+      "h": 10,
+      "src": "asset:bmftwfwqs:mbcbftw-netscape-3.png"
+    },
+    {
+      "id": "bmftwga28",
+      "type": "link",
+      "x": 169.5,
+      "y": 192.5,
+      "w": 12,
+      "h": 6,
+      "title": "Link",
+      "url": "https://anthology.rhizome.org/my-boyfriend-came-back-from-the-war"
+    },
+    {
+      "id": "bmftwgkag",
+      "type": "keyword",
+      "x": 187,
+      "y": 204.5,
+      "w": 7,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "WEB AFFORDANCES"
+    },
+    {
+      "id": "bmftwh264",
+      "type": "keyword",
+      "x": 187.5,
+      "y": 207.5,
+      "w": 6,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "SLOW LOADING"
+    },
+    {
+      "id": "bmftwhao0",
+      "type": "keyword",
+      "x": 187.5,
+      "y": 210.5,
+      "w": 11,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "CINEMATIC SUSPENSE"
+    },
+    {
+      "id": "bmftwpr1j",
+      "type": "image",
+      "x": 116,
+      "y": 143.5,
+      "w": 12,
+      "h": 10,
+      "src": "asset:bmftwpr1j:cokr.jpeg"
+    },
+    {
+      "id": "bmftwpzto",
+      "type": "keyword",
+      "x": 125,
+      "y": 150.5,
+      "w": 8.5,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "WEB MATERIALITY"
+    },
+    {
+      "id": "bmftwvuum",
+      "type": "keyword",
+      "x": 188.5,
+      "y": 192.5,
+      "w": 17.5,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "TINY HTML GESTURES SCALE INTO WORLD-BUILDING"
+    },
+    {
+      "id": "bmftx1t79",
+      "type": "keyword",
+      "x": 125,
+      "y": 159,
+      "w": 7,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "BACKEND EXPOSED"
+    },
+    {
+      "id": "bmftxex3o",
+      "type": "image",
+      "x": 130,
+      "y": 231.5,
+      "w": 12,
+      "h": 10,
+      "src": "asset:bmftxex3o:Screenshot 2025-09-21 at 18.42.37.png"
+    },
+    {
+      "id": "bmftxf0tw",
+      "type": "image",
+      "x": 116,
+      "y": 231.5,
+      "w": 12,
+      "h": 10,
+      "title": "VNS MATRIX MANIFESTO",
+      "src": "asset:bmftxf0tw:Screenshot 2025-09-21 at 18.42.47.png"
+    },
+    {
+      "id": "bmftxfoyd",
+      "type": "link",
+      "x": 102.5,
+      "y": 231.5,
+      "w": 12,
+      "h": 6,
+      "title": "Link",
+      "url": "https://vnsmatrix.net/projects/the-cyberfeminist-manifesto-for-the-21st-century"
+    },
+    {
+      "id": "bmftxn1rq",
+      "type": "keyword",
+      "x": 187.5,
+      "y": 213.5,
+      "w": 6,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "ADDRESS BAR"
+    },
+    {
+      "id": "bmftxngvv",
+      "type": "keyword",
+      "x": 165.5,
+      "y": 88.5,
+      "w": 6,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "ADDRESS BAR"
+    },
+    {
+      "id": "bmftz3n33",
+      "type": "image",
+      "x": 143,
+      "y": 183,
+      "w": 12,
+      "h": 15,
+      "title": "TRUST EXERCISE, MAYA MAN",
+      "src": "asset:bmftz3n33:MYM-1-image-1.gif"
+    },
+    {
+      "id": "bmftz472n",
+      "type": "link",
+      "x": 143,
+      "y": 175.5,
+      "w": 12,
+      "h": 6,
+      "title": "Link",
+      "url": "https://mayaontheinter.net/"
+    },
+    {
+      "id": "bmftzjp63",
+      "type": "keyword",
+      "x": 196,
+      "y": 70,
+      "w": 6,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "SIMULATION"
+    },
+    {
+      "id": "bmftzju6j",
+      "type": "keyword",
+      "x": 196,
+      "y": 73,
+      "w": 6,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "INTERFACE"
+    },
+    {
+      "id": "bmftzlcng",
+      "type": "link",
+      "x": 172,
+      "y": 155,
+      "w": 12,
+      "h": 6,
+      "title": "Link",
+      "url": "https://www.airpressure.info/"
+    },
+    {
+      "id": "bmftzlgfj",
+      "type": "image",
+      "x": 158,
+      "y": 155,
+      "w": 12,
+      "h": 10,
+      "title": "AIR PRESSURE, LAWRENCE ABU HAMDAN",
+      "src": "asset:bmftzlgfj:Screenshot 2025-09-21 at 19.42.15.png"
+    },
+    {
+      "id": "bmfu84df1",
+      "type": "keyword",
+      "x": 185.5,
+      "y": 185,
+      "w": 6,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "ORCHESTRATED"
+    },
+    {
+      "id": "bmfu84ubl",
+      "type": "keyword",
+      "x": 203,
+      "y": 185,
+      "w": 6,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "EMERGENT"
+    },
+    {
+      "id": "bmfu8a2ac",
+      "type": "keyword",
+      "x": 185.5,
+      "y": 181.5,
+      "w": 6,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "HYPERTEXT"
+    },
+    {
+      "id": "bmfu8a5p3",
+      "type": "keyword",
+      "x": 203,
+      "y": 181.5,
+      "w": 6,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "LINEAR"
+    },
+    {
+      "id": "bmfu8jbka",
+      "type": "keyword",
+      "x": 185.5,
+      "y": 188.5,
+      "w": 6,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "VOLATILE"
+    },
+    {
+      "id": "bmfu8jeqs",
+      "type": "keyword",
+      "x": 203,
+      "y": 188.5,
+      "w": 6,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "STABLE"
+    },
+    {
+      "id": "bmfu8myls",
+      "type": "keyword",
+      "x": 193.5,
+      "y": 177.5,
+      "w": 8,
+      "h": 2.5,
+      "title": "keyword",
+      "text": "WEB-SYNTHESIS AXES"
+    }
+  ],
+  "connections": [
+    {
+      "id": "cmfl4wp9i",
+      "from": "bmfl4j1pp",
+      "to": "bmfl4izj1"
+    },
+    {
+      "id": "cmfl593xi",
+      "from": "bmfl52nvi",
+      "to": "bmfl4j1pp"
+    },
+    {
+      "id": "cmfl67tac",
+      "from": "bmfl669q8",
+      "to": "bmfl65b70"
+    },
+    {
+      "id": "cmfl93ok1",
+      "from": "bmfl91kb1",
+      "to": "bmfl8kbyy"
+    },
+    {
+      "id": "cmfl9dueb",
+      "from": "bmfl8kbyy",
+      "to": "bmfl9c9i9"
+    },
+    {
+      "id": "cmfl9dwq2",
+      "from": "bmfl9c9i9",
+      "to": "bmfl9cj0f"
+    },
+    {
+      "id": "cmflbaxob",
+      "from": "bmflb0b3z",
+      "to": "bmflb9ctw"
+    },
+    {
+      "id": "cmflbonxx",
+      "from": "bmfl9c9i9",
+      "to": "bmflbnx7w"
+    },
+    {
+      "id": "cmflbour7",
+      "from": "bmfl9cj0f",
+      "to": "bmflbnx7w"
+    },
+    {
+      "id": "cmflc27r0",
+      "from": "bmflbzdwq",
+      "to": "bmflc0m40"
+    },
+    {
+      "id": "cmflc3trf",
+      "from": "bmflc0m40",
+      "to": "bmflc3e4v"
+    },
+    {
+      "id": "cmflcxgit",
+      "from": "bmflcvpmx",
+      "to": "bmflcvnq4"
+    },
+    {
+      "id": "cmflcxik3",
+      "from": "bmflcvnq4",
+      "to": "bmflcvyq7"
+    },
+    {
+      "id": "cmflcxkaw",
+      "from": "bmflcvyq7",
+      "to": "bmflcw3xr"
+    },
+    {
+      "id": "cmfld1ai0",
+      "from": "bmfld0k45",
+      "to": "bmflcvpmx"
+    },
+    {
+      "id": "cmfldjxma",
+      "from": "bmflb0b3z",
+      "to": "bmfldiw6i"
+    },
+    {
+      "id": "cmfldk3fr",
+      "from": "bmfldiw6i",
+      "to": "bmflbnx7w"
+    },
+    {
+      "id": "cmfldvkex",
+      "from": "bmfld2414",
+      "to": "bmfldstlx"
+    },
+    {
+      "id": "cmfnw7x1f",
+      "from": "bmfnw72id",
+      "to": "bmfnw6k3y"
+    },
+    {
+      "id": "cmfnw8gaz",
+      "from": "bmfnw6k3y",
+      "to": "bmfnw5etx"
+    },
+    {
+      "id": "cmfnwact1",
+      "from": "bmfnw5etx",
+      "to": "bmfnw9tbn"
+    },
+    {
+      "id": "cmfnwgtkf",
+      "from": "bmfnwbbwb",
+      "to": "bmfnwg5pp"
+    },
+    {
+      "id": "cmfnwgwav",
+      "from": "bmfnwg5pp",
+      "to": "bmfnwg2su"
+    },
+    {
+      "id": "cmfnwgyk8",
+      "from": "bmfnwg2su",
+      "to": "bmfnwfzdh"
+    },
+    {
+      "id": "cmfnwmeaq",
+      "from": "bmfnw9tbn",
+      "to": "bmfnwkdw3"
+    },
+    {
+      "id": "cmfo0b2cr",
+      "from": "bmfnw6k3y",
+      "to": "bmfo0accr"
+    },
+    {
+      "id": "cmfo0kug4",
+      "from": "bmfo0accr",
+      "to": "bmfo0k8yj"
+    },
+    {
+      "id": "cmfo0lmzx",
+      "from": "bmfnw5etx",
+      "to": "bmfo0ldas"
+    },
+    {
+      "id": "cmfo0oy9a",
+      "from": "bmfo0o9vc",
+      "to": "bmfnw6k3y"
+    },
+    {
+      "id": "cmfo0q157",
+      "from": "bmfo0o9vc",
+      "to": "bmfo0phfm"
+    },
+    {
+      "id": "cmfo0x4n0",
+      "from": "bmfnw6k3y",
+      "to": "bmfo0wssz"
+    },
+    {
+      "id": "cmfo0xi9a",
+      "from": "bmfo0wssz",
+      "to": "bmfo0vm35"
+    },
+    {
+      "id": "cmfo1aj2b",
+      "from": "bmfnw6k3y",
+      "to": "bmfo19y1h"
+    },
+    {
+      "id": "cmfo1b17o",
+      "from": "bmfo19y1h",
+      "to": "bmfo18ymt"
+    },
+    {
+      "id": "cmfo1ibv8",
+      "from": "bmfnw6k3y",
+      "to": "bmfo1hk4i"
+    },
+    {
+      "id": "cmfo1iuew",
+      "from": "bmfo1hk4i",
+      "to": "bmfo1ipyz"
+    },
+    {
+      "id": "cmfo1yspf",
+      "from": "bmfnw6k3y",
+      "to": "bmfo1y7km"
+    },
+    {
+      "id": "cmfo1zzzx",
+      "from": "bmfo1qqgo",
+      "to": "bmfo1q4i9"
+    },
+    {
+      "id": "cmfo201wt",
+      "from": "bmfo1y7km",
+      "to": "bmfo1yl9a"
+    },
+    {
+      "id": "cmfo24xz1",
+      "from": "bmfo23z3p",
+      "to": "bmfo2478l"
+    },
+    {
+      "id": "cmfo269qv",
+      "from": "bmfnw6k3y",
+      "to": "bmfo23z3p"
+    },
+    {
+      "id": "cmfo43pf9",
+      "from": "bmfo426yg",
+      "to": "bmfo436h2"
+    },
+    {
+      "id": "cmfo4bn9l",
+      "from": "bmfo4b6il",
+      "to": "bmfo4bcog"
+    },
+    {
+      "id": "cmfo4phhz",
+      "from": "bmfo4ok5w",
+      "to": "bmfo4p3hb"
+    },
+    {
+      "id": "cmfo4trl4",
+      "from": "bmfo4t4ls",
+      "to": "bmfo4tcn5"
+    },
+    {
+      "id": "cmfo5edxu",
+      "from": "bmfo5d1ur",
+      "to": "bmfo5dt20"
+    },
+    {
+      "id": "cmfo5nn8n",
+      "from": "bmfo5mu30",
+      "to": "bmfo5n2rv"
+    },
+    {
+      "id": "cmfo67jv9",
+      "from": "bmfo672u3",
+      "to": "bmfo67a5a"
+    },
+    {
+      "id": "cmfo6anjd",
+      "from": "bmfo69j1l",
+      "to": "bmfo6a3gf"
+    },
+    {
+      "id": "cmfo6c4d6",
+      "from": "bmfo67l1d",
+      "to": "bmfo6bqxg"
+    },
+    {
+      "id": "cmfo70ih7",
+      "from": "bmfo6z1g9",
+      "to": "bmfo6ytxq"
+    },
+    {
+      "id": "cmfo78gch",
+      "from": "bmfo76n7z",
+      "to": "bmfo77mq9"
+    },
+    {
+      "id": "cmfo7gz8n",
+      "from": "bmfo7gulv",
+      "to": "bmfo7g6z1"
+    },
+    {
+      "id": "cmfo7oxbw",
+      "from": "bmfo7o0gs",
+      "to": "bmfo7oq6b"
+    },
+    {
+      "id": "cmfo7syhk",
+      "from": "bmfo7s2uh",
+      "to": "bmfo7srw8"
+    },
+    {
+      "id": "cmfo8ozfh",
+      "from": "bmfl4j1pp",
+      "to": "bmfl4v10u"
+    },
+    {
+      "id": "cmfoazsww",
+      "from": "bmfoazerk",
+      "to": "bmfoayqpj"
+    },
+    {
+      "id": "cmfob0dlc",
+      "from": "bmfnw6k3y",
+      "to": "bmfoazerk"
+    },
+    {
+      "id": "cmftu367s",
+      "from": "bmftu2riz",
+      "to": "bmftu23io"
+    },
+    {
+      "id": "cmftub4tp",
+      "from": "bmftu9cmk",
+      "to": "bmftu8td0"
+    },
+    {
+      "id": "cmftug39s",
+      "from": "bmftu9cmk",
+      "to": "bmftufsz8"
+    },
+    {
+      "id": "cmftvi8f6",
+      "from": "bmftvht5m",
+      "to": "bmftvi16o"
+    },
+    {
+      "id": "cmftvk9gt",
+      "from": "bmftvjreb",
+      "to": "bmftvht5m"
+    },
+    {
+      "id": "cmftvm3vx",
+      "from": "bmftvjreb",
+      "to": "bmftvlts3"
+    },
+    {
+      "id": "cmftvm5mp",
+      "from": "bmftvlts3",
+      "to": "bmftvlpy3"
+    },
+    {
+      "id": "cmftvmppg",
+      "from": "bmftvjreb",
+      "to": "bmftvmknm"
+    },
+    {
+      "id": "cmftvoc6d",
+      "from": "bmftvjreb",
+      "to": "bmftvo2wu"
+    },
+    {
+      "id": "cmftvodrk",
+      "from": "bmftvo2wu",
+      "to": "bmftvo7y0"
+    },
+    {
+      "id": "cmftvuwmf",
+      "from": "bmftvtts8",
+      "to": "bmftvu0vy"
+    },
+    {
+      "id": "cmftw7fdf",
+      "from": "bmftw783m",
+      "to": "bmftw5fjq"
+    },
+    {
+      "id": "cmftw7i3n",
+      "from": "bmftu2riz",
+      "to": "bmftw5fjq"
+    },
+    {
+      "id": "cmftwg5xi",
+      "from": "bmftwfaui",
+      "to": "bmftwfwqs"
+    },
+    {
+      "id": "cmftwgeyh",
+      "from": "bmftwga28",
+      "to": "bmftwfaui"
+    },
+    {
+      "id": "cmftwghfd",
+      "from": "bmftwga28",
+      "to": "bmftwfwqs"
+    },
+    {
+      "id": "cmftwi54e",
+      "from": "bmftwh264",
+      "to": "bmftwhao0"
+    },
+    {
+      "id": "cmftwiewf",
+      "from": "bmftwgkag",
+      "to": "bmftwh264"
+    },
+    {
+      "id": "cmftwqola",
+      "from": "bmftu2riz",
+      "to": "bmftwpr1j"
+    },
+    {
+      "id": "cmftxfzfj",
+      "from": "bmftxf0tw",
+      "to": "bmftxfoyd"
+    },
+    {
+      "id": "cmftxg1f6",
+      "from": "bmftxf0tw",
+      "to": "bmftxex3o"
+    },
+    {
+      "id": "cmftz4jkb",
+      "from": "bmftz472n",
+      "to": "bmftz3n33"
+    },
+    {
+      "id": "cmftzlr7o",
+      "from": "bmftzlgfj",
+      "to": "bmftzlcng"
+    },
+    {
+      "id": "cmfu85uao",
+      "from": "bmfu84df1",
+      "to": "bmfu84ubl"
+    },
+    {
+      "id": "cmfu8ah2g",
+      "from": "bmfu8a2ac",
+      "to": "bmfu8a5p3"
+    },
+    {
+      "id": "cmfu8jpx3",
+      "from": "bmfu8jbka",
+      "to": "bmfu8jeqs"
+    }
+  ]
+}
